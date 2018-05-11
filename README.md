@@ -15,4 +15,4 @@ Passionate about production readiness of any project.
 - processing
 
 ## Find me on:
-- Linkedin: (https://www.linkedin.com/in/danielricart/)[https://www.linkedin.com/in/danielricart/]
+- Linkedin: [https://www.linkedin.com/in/danielricart/](https://www.linkedin.com/in/danielricart/)
