@@ -10,4 +10,4 @@ Passionate about production readiness of any project.
 - Simple codes
 
 ## Find me on:
-- Linkedin: https://www.linkedin.com/in/danielricart/
+- Linkedin: [https://www.linkedin.com/in/danielricart/]
