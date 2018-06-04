@@ -5,6 +5,7 @@ Passionate about production readiness of any project.
 - Scalability
 - Repeteability
 - Reproducibility
+- Reliability
 - One-click actions
 - Things that just works
 - Simple codes
