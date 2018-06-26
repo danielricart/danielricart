@@ -12,3 +12,18 @@ node -v
 ```
 Now we have nodeJs version 10.5.0 at least. 
 
+```
+# Linux-only (does not apply to mac setups)
+# random dependency
+sudo apt-get install libavahi-compat-libdnssd-dev
+```
+
+Now that we have everything set, we can install homebridge globally with some unsafe parameter to avoid some nasty errors regarding permissions.
+```
+sudo npm install -g --unsafe-perm homebridge
+```
+
+And time to run `homebridge`. That will fail because it cannot find a `config.json` file
+```
+/opt/nodejs/bin/homebridge
+```
