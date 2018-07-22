@@ -41,3 +41,20 @@ And time to run `homebridge`.
 ```
 homebridge
 ```
+pi@raspberrypi:~ $ homebridge
+[2018-7-22 11:15:01] config.json (/home/pi/.homebridge/config.json) not found.
+[2018-7-22 11:15:01] No plugins found. See the README for information on installing plugins.
+Setup Payload:
+X-HM://0023XXXY1ZZZ
+Scan this code with your HomeKit app on your iOS device to pair with Homebridge:
+
+[HERE YOU WILL SEE A QR CODE]
+
+Or enter this code with your HomeKit app on your iOS device to pair with Homebridge:
+
+    ┌────────────┐
+    │ 012-12-123 │
+    └────────────┘
+
+[2018-7-22 11:15:02] Homebridge is running on port 38125.
+
