@@ -35,7 +35,7 @@ sudo npm install --unsafe-perm bignum
 ```
 Add homebdrige to a more friendly location:
 ```
-sudo ln -s /opt/nodejs/lib/node_modules/homebridge/bin/homebridge /usr/bin/homebridge
+sudo ln -s /opt/nodejs/lib/node_modules/homebridge/bin/homebridge /usr/local/bin/homebridge
 ```
 And time to run `homebridge`. 
 ```
@@ -62,7 +62,28 @@ Or enter this code with your HomeKit app on your iOS device to pair with Homebri
 Press Ctrl+C to stop the service.
 
 Now create a new config file.
-```cp /opt/nodejs/lib/node_modules/homebridge/config-sample.json /home/pi/.homebridge/config.json```
+```
+cp /opt/nodejs/lib/node_modules/homebridge/config-sample.json /home/pi/.homebridge/config.json
+```
 Edit the new file created to set up a new PIN code and username.
 
 In this file you can set up all your accessories and plugins.
+
+Set up starting homebridge on boot time:
+```
+sudo wget -O /etc/default/homebridge https://gist.githubusercontent.com/johannrichard/0ad0de1feb6adb9eb61a/raw/homebridge
+sudo wget -O /etc/systemd/system/homebridge.service https://gist.githubusercontent.com/johannrichard/0ad0de1feb6adb9eb61a/raw/homebridge.service
+sudo mkdir -p /var/lib/homebridge
+sudo useradd -M --system homebridge --home-dir /var/lib/homebridge
+sudo cp /home/pi/.homebridge/config.json /var/lib/homebridge/config.json
+chown -R homebridge: /var/lib/homebridge
+sudo systemctl daemon-reload
+sudo systemctl enable homebridge
+sudo systemctl start homebridge
+```
+check the status of the process:
+```
+sudo systemctl status homebridge
+```
+
+
