@@ -27,10 +27,17 @@ As you will notice, most of the nodejs commands are run as `root` allowing unsaf
 sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
 # update NPM
 npm i npm@latest -g --unsafe-perm
-
+cd /opt/nodejs/lib/node_modules/homebridge/
+sudo npm install --unsafe-perm bignum
+# unused commands, AFAIK.
+# cd /opt/nodejs/lib/node_modules/hap-nodejs/node_modules/multicase-dns
+# sudo PATH="$PATH:/opt/nodejs/lib/node_modules/npm/bin/node-gyp-bin:/opt/node/bin" node-gyp BUILDTYPE=Release rebuild
 ```
-
-And time to run `homebridge`. That will fail because it cannot find a `config.json` file
+Add homebdrige to a more friendly location:
 ```
-/opt/nodejs/bin/homebridge
+sudo ln -s /opt/nodejs/lib/node_modules/homebridge/bin/homebridge /usr/bin/homebridge
+```
+And time to run `homebridge`. 
+```
+homebridge
 ```
