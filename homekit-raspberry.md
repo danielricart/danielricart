@@ -20,9 +20,9 @@ Now we have nodeJs version 8.11.3 at least.
 sudo apt-get install -y libavahi-compat-libdnssd-dev
 ```
 
-Now that we have everything set, we can install homebridge globally with some unsafe parameter to avoid some nasty errors regarding permissions.
+Now that we have everything set, we can install homebridge globally with some unsafe parameter to avoid some nasty errors regarding permissions. As seen in https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi:
 ```
-sudo npm install -g --unsafe-perm homebridge
+sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
 ```
 
 And time to run `homebridge`. That will fail because it cannot find a `config.json` file
