@@ -86,4 +86,9 @@ check the status of the process:
 sudo systemctl status homebridge
 ```
 
+Get your QR Code by running:
+```
+sudo journalctl -eau homebridge
+```
+quit your log pressing `q`
 
