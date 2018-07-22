@@ -92,8 +92,8 @@ sudo journalctl -eau homebridge
 ```
 quit your log pressing `q`
 
-Now install your first plugin, for example a info plugin:
+Now install your first plugin, for example a plugin taht exposes a cheap temperature and humidity sensor DHT to Apple Homekit:
 ```
-sudo npm install -g homebridge-info --unsafe-perm
+sudo npm install -g homebridge-dht --unsafe-perm
 ```
 Do not forget `--unsafe-perm` . as we are installing modules globally and nodejs permissions are a mess.
