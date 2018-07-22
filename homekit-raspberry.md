@@ -59,3 +59,10 @@ Or enter this code with your HomeKit app on your iOS device to pair with Homebri
 
 [2018-7-22 11:15:02] Homebridge is running on port 38125.
 ```
+Press Ctrl+C to stop the service.
+
+Now create a new config file.
+```cp /opt/nodejs/lib/node_modules/homebridge/config-sample.json /home/pi/.homebridge/config.json```
+Edit the new file created to set up a new PIN code and username.
+
+In this file you can set up all your accessories and plugins.
