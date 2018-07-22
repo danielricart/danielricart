@@ -17,7 +17,7 @@ Now we have nodeJs version 8.11.3 at least.
 ```
 # Linux-only (does not apply to mac setups)
 # random dependency
-sudo apt-get install libavahi-compat-libdnssd-dev
+sudo apt-get install -y libavahi-compat-libdnssd-dev
 ```
 
 Now that we have everything set, we can install homebridge globally with some unsafe parameter to avoid some nasty errors regarding permissions.
