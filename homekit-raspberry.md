@@ -23,8 +23,8 @@ sudo apt-get install -y libavahi-compat-libdnssd-dev
 Now that we have everything set, we can install homebridge globally with some unsafe parameter to avoid some nasty errors regarding permissions. As seen in https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi:
 ```
 sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
-# random error
-# npm WARN notice [SECURITY] hoek has the following vulnerability: 1 moderate. Go here for more details: https://nodesecurity.io/advisories?search=hoek&version=2.16.3 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+# update NPM
+npm i npm@latest -g
 
 ```
 
