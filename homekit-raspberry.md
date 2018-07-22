@@ -92,3 +92,8 @@ sudo journalctl -eau homebridge
 ```
 quit your log pressing `q`
 
+Now install your first plugin, for example a info plugin:
+```
+sudo npm install -g homebridge-info --unsafe-perm
+```
+Do not forget `--unsafe-perm` . as we are installing modules globally and nodejs permissions are a mess.
