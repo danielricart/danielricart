@@ -92,7 +92,8 @@ sudo journalctl -eau homebridge
 ```
 quit your log pressing `q`
 
-Now install your first plugin, for example a plugin taht exposes a cheap temperature and humidity sensor DHT to Apple Homekit:
+Now install your first plugin, for example a plugin taht exposes a cheap temperature and humidity sensor DHT to Apple Homekit. 
+Will Follow this guide: https://www.instructables.com/id/RPIHomeBridge-TemperatureHumidity-Sensor/ 
 ```
 sudo npm install -g homebridge-dht --unsafe-perm
 ```
