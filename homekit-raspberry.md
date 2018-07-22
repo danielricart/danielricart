@@ -98,3 +98,9 @@ Will Follow this guide: https://www.instructables.com/id/RPIHomeBridge-Temperatu
 sudo npm install -g homebridge-dht --unsafe-perm
 ```
 Do not forget `--unsafe-perm` . as we are installing modules globally and nodejs permissions are a mess.
+
+Install some system dependencies for GPIO reading:
+```
+sudo apt-get install pigpio
+```
+
