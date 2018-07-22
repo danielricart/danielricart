@@ -101,6 +101,6 @@ Do not forget `--unsafe-perm` . as we are installing modules globally and nodejs
 
 Install some system dependencies for GPIO reading:
 ```
-sudo apt-get install pigpio
+sudo apt-get install pigpio python-pigpio python3-pigpio
 ```
 
