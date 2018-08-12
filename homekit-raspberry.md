@@ -92,15 +92,14 @@ sudo journalctl -eau homebridge
 ```
 quit your log pressing `q`
 
-Now install your first plugin, for example a plugin taht exposes a cheap temperature and humidity sensor DHT to Apple Homekit. 
-Will Follow this guide: https://www.instructables.com/id/RPIHomeBridge-TemperatureHumidity-Sensor/ 
+Now install your first plugin, for example a plugin taht fetch via HTTP a json document that contains a reading for temperature and humidity.  
 ```
-sudo npm install -g homebridge-dht --unsafe-perm
+sudo npm install -g homebridge-http-temperature-humidity --unsafe-perm
 ```
 Do not forget `--unsafe-perm` . as we are installing modules globally and nodejs permissions are a mess.
 
 Install some system dependencies for GPIO reading:
 ```
-sudo apt-get install pigpio python-pigpio python3-pigpio
+sudo apt-get install pigpio python-pigpio python3-pigpio python3-dev
 ```
 
