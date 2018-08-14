@@ -102,4 +102,8 @@ Install some system dependencies for GPIO reading:
 ```
 sudo apt-get install pigpio python-pigpio python3-pigpio python3-dev
 ```
+also: 
+Run `sudo raspi-config`, go to `Interfacing Options` and enable `Remote GPIO` in order to allow PIGPIO to work . This will not expose directly your GPIO through network but allow some magic to make it work.
+
+
 
