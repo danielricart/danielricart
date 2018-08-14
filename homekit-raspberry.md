@@ -93,15 +93,32 @@ sudo journalctl -eau homebridge
 ```
 quit your log pressing `q`
 
-Now install your first plugin, for example a plugin taht fetch via HTTP a json document that contains a reading for temperature and humidity.  
+Now install your first plugin, for example a plugin taht exposes a cheap temperature and humidity sensor DHT to Apple Homekit. 
+Will Follow this guide: https://www.instructables.com/id/RPIHomeBridge-TemperatureHumidity-Sensor/ 
 ```
-sudo npm install -g homebridge-http-temperature-humidity --unsafe-perm
+sudo npm install -g homebridge-dht --unsafe-perm
 ```
+
 Do not forget `--unsafe-perm` . as we are installing modules globally and nodejs permissions are a mess.
 
 Install some system dependencies for GPIO reading:
 ```
 sudo apt-get install pigpio python-pigpio python3-pigpio python3-dev
 ```
+add the following accessory (edit it to match your environment) to your `/var/lib/homebridge/config.json` file, section `accesories`:
+```
+{ 
+  "accessory":   "Dht",
+  "name":        "dht22 - indoor",
+  "name_temperature": "Indoor Temperature",
+  "name_humidity": "Indoor Humdity",
+  "gpio":        "4",       
+  "service":     "dht22" 
+},
+```
 
-
+A useful plugin if you want to elaborate more on exposing "calculated temperatures" (like dewpoint or humidex) is `homebridge-http-temperature-humidity` (read more about it here: https://github.com/lucacri/homebridge-http-temperature-humidity ). 
+```
+sudo npm install -g homebridge-http-temperature-humidity --unsafe-perm
+```
+You can use this plugin to fetch the temperature from my small side project: HttpSensors ( https://github.com/danielricart/httpsensors ).
