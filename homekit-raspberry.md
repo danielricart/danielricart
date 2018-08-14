@@ -75,6 +75,7 @@ sudo wget -O /etc/default/homebridge https://gist.githubusercontent.com/johannri
 sudo wget -O /etc/systemd/system/homebridge.service https://gist.githubusercontent.com/johannrichard/0ad0de1feb6adb9eb61a/raw/homebridge.service
 sudo mkdir -p /var/lib/homebridge
 sudo useradd -M --system homebridge --home-dir /var/lib/homebridge
+sudo adduser homebridge gpio
 sudo cp /home/pi/.homebridge/config.json /var/lib/homebridge/config.json
 chown -R homebridge: /var/lib/homebridge
 sudo systemctl daemon-reload
